@@ -6,6 +6,11 @@ TEMPLATE = app
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+# 强制MSVC编译器将源文件按UTF-8解析
+win32 {
+    QMAKE_CXXFLAGS += /utf-8
+    QMAKE_CFLAGS += /utf-8
+}
 
 //DEFINES += LANGUE_EN
 

@@ -36,13 +36,13 @@ MainWindow::MainWindow(QWidget *parent) :
     if(ret <= 0)
     {
         USB_CAN_status = 1;
-        ui->Connect_USB_CAN->setText(tr("无设备"));
+        ui->Connect_USB_CAN->setText(tr(u8"无设备"));
     }
     else
     {
-        ui->Connect_USB_CAN->setText(tr("连接"));
+        ui->Connect_USB_CAN->setText(tr(u8"连接"));
         ui->deviceIndexComboBox->setMaxCount(ret);
-        ui->deviceIndexComboBox->addItem(tr("USB_CAN"),Qt::DisplayRole);
+        ui->deviceIndexComboBox->addItem(tr(u8"USB_CAN"),Qt::DisplayRole);
     }
     //初始化部分按钮的状态
     ui->Close_CAN->setEnabled(false);
@@ -1984,7 +1984,7 @@ unsigned long int MainWindow::hex_size_calc(QString str)
     char hex_buf[90];
     char bin_buf[40];
     int data_len = 0x00;
-   char data_type = 0xFF;
+    char data_type = 0xFF;
     QFile firmwareFile(str);
     if (firmwareFile.open(QFile::ReadOnly))
     {
