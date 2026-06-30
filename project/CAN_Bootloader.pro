@@ -32,7 +32,7 @@ SOURCES += \
     ../source/mainwindow.cpp \
     ../source/scandevrangedialog.cpp
 
-unix|win32: LIBS += -L$$PWD/lib/win32/ -lControlCAN
+unix|win32: LIBS += -L$$PWD/lib/x64/ -lControlCAN
 
-INCLUDEPATH += $$PWD/lib/win32
-DEPENDPATH += $$PWD/lib/win32
+INCLUDEPATH += $$PWD/lib/x64
+DEPENDPATH += $$PWD/lib/x64
